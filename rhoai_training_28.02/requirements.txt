@@ -14,5 +14,4 @@ sentence-transformers==2.2.2
 xlsxwriter==3.1.9
 optimum[onnxruntime]==1.15.0
 transformers==4.35.2
-evaluate==0.4.1
 mkl-include==2024.0.0
