@@ -1,0 +1,3 @@
+mariadb-connector-c-devel-3.2.6-1.el9_0.x86_64
+msodbcsql17
+mssql-tools

@@ -9,3 +9,10 @@ openpyxl==3.1.2
 scikit-learn==1.4.0
 Flask==3.0.3
 Flask-RESTful==0.3.10
+wheel
+openpyxl
+xlsxwriter
+torch @ https://download.pytorch.org/whl/cpu/torch-2.3.0%2Bcpu-cp311-cp311-linux_x86_64.whl#sha256=97a38b25ee0e3d020691e7846efbca62a3d8a57645c027dcb5ba0adfec36fe55
+transformers
+tqdm
+scipy

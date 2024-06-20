@@ -4,9 +4,18 @@ RUN pip install pip==22.3.1 setuptools==65.3.0
 
 USER 1001
 
+COPY requirements-yum.txt ./
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt && \
     chmod -R g+w /opt/app-root/lib/python3.9/site-packages && \
     fix-permissions /opt/app-root -P
+
+RUN curl https://packages.microsoft.com/config/rhel/9.0/prod.repo > /etc/yum.repos.d/mssql-release.repo && \
+    ACCEPT_EULA=Y yum -y --setopt=tsflags=nodocs install $(cat ./requirements-yum.txt) && \
+    yum install -y --setopt=tsflags=nodocs unixODBC-devel && \
+    yum clean all && \
+    rm -f ./requirements-yum.txt ./requirements.txt && \
+    chmod -R 775 .
+
 
 RUN python -m nltk.downloader all
