@@ -8,6 +8,7 @@ RUN yum -y install unixODBC && \
 
 USER 1001
 
+COPY ./input-data /input-data
 COPY requirements-elyra.txt ./
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt && \

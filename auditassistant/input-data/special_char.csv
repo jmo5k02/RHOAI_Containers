@@ -1,0 +1,52 @@
+special_char,replacement
+"
+", 
+$, dollars 
+€, euros 
+%, percent 
+&, and 
+“,
+”,
+•,
+-, 
+ä,ae
+ö,oe
+ü,ue
+ß,ss
+!,
+"""",
+#,
+',
+(,
+),
+’,
+*,
++,
+",",
+/,
+:,
+;,
+<,
+=,
+>,
+?,
+@,
+[,
+\,
+],
+^,
+_,
+`,
+{,
+|,
+},
+~,
+project,
+projects,
+Siemens,
+EUR,
+USD,
+FY,
+SMO,
+SFS,
+CF A,
