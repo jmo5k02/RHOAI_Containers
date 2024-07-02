@@ -13,12 +13,10 @@ RUN pip install --no-cache-dir -r requirements.txt && \
     fix-permissions /opt/app-root -P
 
 RUN python -c 'from sentence_transformers import SentenceTransformer; import os; \
-    model_name1 = os.environ["SBERT_MODEL_NAME1"]; \
-    model_name2 = os.environ["SBERT_MODEL_NAME2"]; \
-    model = SentenceTransformer(model_name1); \
-    model.save("/app/input-data/" + model_name1); \ 
-    model = SentenceTransformer(model_name2); \
-    model.save("/app/input-data/" + model_name2); \
+    model = SentenceTransformer('all-MiniLM-L6-v2'); \
+    model.save("/input-data/" + 'all-MiniLM-L6-v2'); \ 
+    model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2'); \
+    model.save("/input-data/" + 'paraphrase-multilingual-MiniLM-L12-v2'); \
     import nltk; \
     nltk.set_proxy("http://proxy.dc4ca.siemens.de:8080"); \
-    nltk.download("wordnet", download_dir="/app/nltk_data")'
+    nltk.download("wordnet", download_dir="/nltk_data")'
